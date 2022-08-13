@@ -2,8 +2,10 @@
 
 List fitur:
 
-## Scene:
+## Scenes:
 	- Main Menu
+	- Splash Screen
+	- Name Input
 	- Gameplay
 	- Leaderboard
 - Kalau masuk top 10 isi nama, ga masuk top ten = ga usah
