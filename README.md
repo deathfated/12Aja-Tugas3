@@ -21,7 +21,8 @@ List fitur:
 - Ada BGM Looping (1 BGM untuk semuanya dari main menu - gameplay - leaderboard)
 
 ### Peluru
-- Pake RigidBody & Collider (musuh pake collider) -> bisa trigger unactive musuh dan pooling
+- Cara 1: Pake RigidBody & Collider (musuh pake collider) -> bisa trigger unactive musuh dan pooling
+- Cara 2: Pake variable List di dalam script utk objek dibawahnya aktif ato nggak
 
 ### SFX
 	- Player nembak
