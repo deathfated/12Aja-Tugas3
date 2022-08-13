@@ -19,6 +19,10 @@ List fitur:
 - Terdapat Power Up yang mengubah peluru agar bisa menembus 2 musuh. Power Up memiliki durasi, tidak permanen. >> Mungkin kasih darah untuk peluru, ketika hit 1 musuh, darah peluru kurang 1. Sehingga, masih bisa jalan untuk kena ke musuh kedua.
 - Destructible Obstacle
 - Ada BGM Looping (1 BGM untuk semuanya dari main menu - gameplay - leaderboard)
+
+### Peluru
+- Pake RigidBody & Collider (musuh pake collider) -> bisa trigger unactive musuh dan pooling
+
 ### SFX
 	- Player nembak
 	- Musuh nembak
@@ -34,8 +38,12 @@ List fitur:
 	- nembaknya ada interval, semakin posisi musuh turun, intervalnya berkurang
 	- musuh yang nembak random. jadi jalanin interval -> cari musuh yang tidak ada musuh lagi dibawahnya -> pilih random buat nembak.
 	- peluru musuh jika kena batas bawah, ancur (nonaktif)
+	- setiap object enemy ada child obj kosong Detector dibawahnya yang ngecek ada musuh dibawah. Kalo ada, nggak nembak. 
 - Musuh ketika mentok kiri/kanan: maka akan turun ke bawah 1 baris, speednya nambah (termasuk interval nembak), berjalan lawan arah sebelumnya
 - Setiap level baru, musuh turun 1 baris dari baris teratas dia spawn sebelumnya
+
+## Leaderboard
+-pake .json implementation
 
 ## Assets used
 https://itch.io/c/2701207/space-invader
