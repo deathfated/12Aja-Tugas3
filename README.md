@@ -1,6 +1,6 @@
 # 12Aja-Tugas3
 
-List fitur:
+TDD & Pembagian tugas: https://docs.google.com/document/d/1BipXo7MzTLcLR8HTHuwqQzWmBuyBPX-Omi0VGxbMQzU/edit#heading=h.63no2zp0dpyq
 
 ## Scenes:
 	- Main Menu
