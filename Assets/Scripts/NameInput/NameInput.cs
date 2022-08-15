@@ -48,7 +48,7 @@ namespace Aja.NameInput
 
         private void OnGUI()
         {
-            stringToEdit = GUI.TextField(new Rect(510, 360, 50, 20), stringToEdit, 3);
+            stringToEdit = GUI.TextField(new Rect(510, 400, 50, 20), stringToEdit, 3);
         }
 
         private void Update()

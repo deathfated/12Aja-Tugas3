@@ -26,7 +26,7 @@ namespace Aja.MainMenu
         protected override IEnumerator InitSceneObject()
         {
             _view.SetCallbacks(OnClickPlayButton);
-            //_view.SetCallbacks(OnClickLeaderboardButton);
+            _view.SetCallbackToo(OnClickLeaderboardButton);
             yield return null;
         }
 

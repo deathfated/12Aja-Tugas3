@@ -5,26 +5,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LbLauncher : SceneLauncher<LbLauncher, LbView>
+namespace Aja.Leaderboard
 {
-    public override string SceneName => "Leaderboard";
-    protected override IConnector[] GetSceneConnectors()
+    public class LbLauncher : SceneLauncher<LbLauncher, LbView>
     {
-        return null;
-    }
+        public override string SceneName => "Leaderboard";
+        protected override IConnector[] GetSceneConnectors()
+        {
+            return null;
+        }
 
-    protected override IController[] GetSceneDependencies()
-    {
-        return null;
-    }
+        protected override IController[] GetSceneDependencies()
+        {
+            return null;
+        }
 
-    protected override IEnumerator InitSceneObject()
-    {
-        yield return null;
-    }
+        protected override IEnumerator InitSceneObject()
+        {
+            _view.SetCallbacks(OnClickBackButton);
+            yield return null;
+        }
 
-    protected override IEnumerator LaunchScene()
-    {
-        yield return null;
+        protected override IEnumerator LaunchScene()
+        {
+            yield return null;
+        }
+
+        private void OnClickBackButton()
+        {
+            SceneLoader.Instance.LoadScene("MainMenu");
+        }
     }
 }

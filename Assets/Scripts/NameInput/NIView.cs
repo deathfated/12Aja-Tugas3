@@ -5,13 +5,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class NIView : BaseSceneView
+namespace Aja.NameInput
 {
-    [SerializeField] private Button _playButton;
-
-    public void SetCallbacks(UnityAction onClickPlayButton)
+    public class NIView : BaseSceneView
     {
-        _playButton.onClick.RemoveAllListeners();
-        _playButton.onClick.AddListener(onClickPlayButton);
+        [SerializeField] private Button _playButton;
+
+        public void SetCallbacks(UnityAction onClickPlayButton)
+        {
+            _playButton.onClick.RemoveAllListeners();
+            _playButton.onClick.AddListener(onClickPlayButton);
+        }
     }
 }

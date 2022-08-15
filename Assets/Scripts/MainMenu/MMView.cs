@@ -18,5 +18,11 @@ namespace Aja.MainMenu
             _playButton.onClick.RemoveAllListeners();
             _playButton.onClick.AddListener(onClickPlayButton);
         }
+
+        public void SetCallbackToo(UnityAction onClickLeaderboardButton)
+        {
+            _leaderboardButton.onClick.RemoveAllListeners();
+            _leaderboardButton.onClick.AddListener(onClickLeaderboardButton);
+        }
     }
 }
