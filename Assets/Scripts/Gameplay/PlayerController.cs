@@ -12,6 +12,8 @@ namespace Aja.Gameplay
 
         private Rigidbody2D rig;
 
+        public GameObject bulletFabs;
+
         private void Start()
         {
             rig = GetComponent<Rigidbody2D>();
@@ -20,6 +22,10 @@ namespace Aja.Gameplay
         private void Update()
         {
             MovePlayer(GetInput());
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Fire();
+            }
         }
 
         private void MovePlayer(Vector2 move)
@@ -38,6 +44,11 @@ namespace Aja.Gameplay
                 return Vector2.right * speed;
             }
             return Vector2.zero;
+        }
+
+        void Fire()
+        {
+            Instantiate(bulletFabs, gameObject.transform.position, Quaternion.identity);
         }
     }
 }
