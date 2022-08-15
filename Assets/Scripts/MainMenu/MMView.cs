@@ -10,6 +10,8 @@ namespace Aja.MainMenu
     public class MMView : BaseSceneView
     {
         [SerializeField] private Button _playButton;
+        [SerializeField] private Button _leaderboardButton;
+
 
         public void SetCallbacks(UnityAction onClickPlayButton)
         {
