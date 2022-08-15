@@ -35,7 +35,6 @@ public class playerBullet : MonoBehaviour
         {
             EnemyFire enemyfire = enemyParent.GetComponent<EnemyFire>();
             enemyfire.swapAttack(collision.gameObject);
-            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }

@@ -91,21 +91,29 @@ public class EnemyFire : MonoBehaviour
     {
         int index = readyAttack.IndexOf(gameobject);
 
+        int index1 = enemyList.IndexOf(gameobject);
+
         int idx = int.Parse(gameobject.name);
 
-
-        if (GameObject.Find((idx + 11).ToString()) == null)
-        {
-            readyAttack.RemoveAt(index);
-        }
-        if (GameObject.Find((idx + 11).ToString()) != null)
-        {
-            readyAttack[index] = GameObject.Find((idx + 11).ToString());
-          //  readyAttack.RemoveAt(index);
-
-        }
         
 
+        if (readyAttack.Contains(gameobject))
+        {
+
+            enemyList.RemoveAt(index);
+            if (GameObject.Find((idx + grid).ToString()) == null)
+            {
+                readyAttack.RemoveAt(index);
+            }
+
+            if (GameObject.Find((idx + grid).ToString()) != null)
+            {
+                readyAttack[index] = GameObject.Find((idx + grid).ToString());
+                //  readyAttack.RemoveAt(index);
+
+            }
+            Destroy(gameobject);
+        }
     }
 
     public void Fire(int x)

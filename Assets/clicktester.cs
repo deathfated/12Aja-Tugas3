@@ -25,7 +25,6 @@ public class clicktester : MonoBehaviour
                 Debug.Log(hit.collider.name);
                 EnemyFire enemyfire = gameObject.GetComponent<EnemyFire>();
                 enemyfire.swapAttack(hit.collider.gameObject);
-                Destroy(hit.collider.gameObject);
             }
         }
     }
