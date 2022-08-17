@@ -1,32 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Aja.Gameplay
 {
     public class PlayerBullet : BulletScript
     {
         public GameObject enemyParent;
+        public Text scoreText;
+
+        //int _score;
 
         void Start()
         {
             enemyParent = GameObject.Find("ENEMY");
+            //_score = 0;
         }
 
         protected override void Update()
         {
             transform.Translate(speed * Time.deltaTime * Vector2.up);
-            checkBorder();
+            CheckBorder();
         }
-
-        /*public void checkBorder()
-        {
-            Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
-            if (screenPosition.y > Screen.width || screenPosition.y < 0)
-            {
-                Destroy(gameObject);
-            }
-        }*/
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
@@ -35,6 +31,8 @@ namespace Aja.Gameplay
                 EnemyFire enemyfire = enemyParent.GetComponent<EnemyFire>();
                 enemyfire.swapAttack(collision.gameObject);
                 Destroy(gameObject);
+
+                //ScoreManager.PlayerScored();
             }
         }
     }

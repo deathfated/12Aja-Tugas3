@@ -11,10 +11,10 @@ namespace Aja.Gameplay
         protected virtual void Update()
         {
             transform.Translate(speed * Time.deltaTime * Vector2.down);
-            checkBorder();
+            CheckBorder();
         }
 
-        public void checkBorder()
+        public void CheckBorder()
         {
             Vector2 screenPosition = Camera.main.WorldToScreenPoint(transform.position);
             if (screenPosition.y > Screen.width || screenPosition.y < 0)
