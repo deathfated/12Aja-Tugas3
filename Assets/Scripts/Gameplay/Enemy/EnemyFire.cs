@@ -7,7 +7,7 @@ public class EnemyFire : MonoBehaviour
     public int grid, enemyCount;
     public List<GameObject> enemyList = new List<GameObject>();
     public List<GameObject> readyAttack = new List<GameObject>();
-    // Start is called before the first frame update
+
     [SerializeField]
     private float jeda;
     private float defJeda;

@@ -10,13 +10,18 @@ namespace Aja.Gameplay
         [SerializeField] private KeyCode rightKey;
         [SerializeField] private float speed;
 
+        public int playerLives; 
+
         private Rigidbody2D rig;
+        private Vector2 resetPosition;
 
         public GameObject bulletFabs;
 
         private void Start()
         {
+            playerLives = 3;
             rig = GetComponent<Rigidbody2D>();
+            resetPosition = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y);
         }
 
         private void Update()
@@ -49,6 +54,33 @@ namespace Aja.Gameplay
         void Fire()
         {
             Instantiate(bulletFabs, gameObject.transform.position, Quaternion.identity);
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.CompareTag("bullet"))
+            {
+                if(playerLives <= 0)
+                {
+                    //gameover
+                }
+                else Dead();
+            }
+        }
+
+        void Dead()
+        {
+            gameObject.transform.position = resetPosition;
+            gameObject.SetActive(false);
+
+            playerLives -= 1;
+
+            Invoke(nameof(Respawn), 5.0f);
+        }
+
+        void Respawn()
+        {
+            gameObject.SetActive(true);
         }
     }
 }
