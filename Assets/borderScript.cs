@@ -25,6 +25,7 @@ public class borderScript : MonoBehaviour
             Debug.Log("border");
             EnemyParent enemyparent = enemyParent.GetComponent<EnemyParent>();
             enemyparent.changeDir();
+            return;
         }
     }
 }
