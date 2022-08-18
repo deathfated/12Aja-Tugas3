@@ -10,7 +10,10 @@ namespace Aja.NameInput
 {
     public class NameInput : SceneLauncher<NameInput, NIView>
     {
+<<<<<<< HEAD
         public string stringToEdit = "AAA";
+=======
+>>>>>>> Develop-Winner
         [SerializeField] private Text teks;
 
         public override string SceneName => "NameInput";
@@ -39,12 +42,16 @@ namespace Aja.NameInput
         private void OnClickButton()
         {
             PlayerPrefs.SetString("playerName", teks.text);
+<<<<<<< HEAD
             // buat panggil nanti:
             //string a = playerpref.setstring("playerName");
+=======
+>>>>>>> Develop-Winner
             Debug.Log("Current Player Name: " + teks.text);
 
             SceneLoader.Instance.LoadScene("Gameplay");
         }
+<<<<<<< HEAD
 
         private void OnGUI()
         {
@@ -55,5 +62,7 @@ namespace Aja.NameInput
         {
             teks.text = stringToEdit;
         }
+=======
+>>>>>>> Develop-Winner
     }
 }

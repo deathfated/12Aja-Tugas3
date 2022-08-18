@@ -116,7 +116,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04a4dff04330dea48a4cdca06def034a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   speed: 1
+=======
+<<<<<<< Updated upstream
+  speed: 8
+=======
+  speed: 3
+>>>>>>> Develop-Winner
 --- !u!50 &8806279890873677943
 Rigidbody2D:
   serializedVersion: 4
@@ -138,6 +145,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+<<<<<<< HEAD
 --- !u!82 &-4497005921151742532
 AudioSource:
   m_ObjectHideFlags: 0
@@ -234,3 +242,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+=======
+>>>>>>> Stashed changes
+>>>>>>> Develop-Winner

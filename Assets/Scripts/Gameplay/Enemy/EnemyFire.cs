@@ -6,7 +6,11 @@ namespace Aja.Enemy
 {
     public class EnemyFire : MonoBehaviour
     {
+<<<<<<< HEAD
         public int grid, enemyCount;
+=======
+        public int grid;
+>>>>>>> Develop-Winner
         public List<GameObject> enemyList = new List<GameObject>();
         public List<GameObject> readyAttack = new List<GameObject>();
 
@@ -40,6 +44,7 @@ namespace Aja.Enemy
         public void setEnemyCount(int counted)
         {
             grid = counted;
+<<<<<<< HEAD
             enemyCount = grid;
         }
         public void addEnemyList()
@@ -78,13 +83,35 @@ namespace Aja.Enemy
             {
                 enemyList[x].name = x.ToString();
             }
+=======
+        }
+        public void addEnemyList()
+        {
+            int index = 1;
+
+                enemySearch();
+            addAttackers();
+        }
+
+        void enemySearch()
+        {
+            for (int i = 0; i < grid * 5; i++)
+            {
+                GameObject g = GameObject.Find(i.ToString());
+                enemyList.Add(g);
+            }
+>>>>>>> Develop-Winner
         }
 
         void addAttackers()
         {
             for (int i = 0; i < grid; i++)
             {
+<<<<<<< HEAD
                 GameObject g = GameObject.Find(i.ToString());
+=======
+                GameObject g = enemyList[i];
+>>>>>>> Develop-Winner
                 readyAttack.Add(g);
             }
         }
@@ -92,6 +119,7 @@ namespace Aja.Enemy
         public void swapAttack(GameObject gameobject)
         {
             int index = readyAttack.IndexOf(gameobject);
+<<<<<<< HEAD
 
             int index1 = enemyList.IndexOf(gameobject);
 
@@ -113,6 +141,19 @@ namespace Aja.Enemy
                     readyAttack[index] = GameObject.Find((idx + grid).ToString());
                     //  readyAttack.RemoveAt(index);
 
+=======
+            int index1 = enemyList.IndexOf(gameobject);
+
+            if (readyAttack.Contains(gameobject))
+            {
+                if ((index1 + grid) >= (grid * 5))
+                {
+                    readyAttack.RemoveAt(index);
+                }
+                if ((index1 + grid) < (grid * 5))
+                {
+                    readyAttack[index] = enemyList[index1+grid];
+>>>>>>> Develop-Winner
                 }
                 Destroy(gameobject);
             }

@@ -18,7 +18,11 @@ namespace Aja.Game
         protected override void InitRenderModel(IGameModel model)
         {
             _scoreText.text = $"{model.Score.ToString()}";
+<<<<<<< HEAD
             _nameText.text = $"{model.Name}";
+=======
+            _nameText.text = PlayerPrefs.GetString("playerName"); // $"{model.Name}";
+>>>>>>> Develop-Winner
         }
 
         protected override void UpdateRenderModel(IGameModel model)
@@ -32,6 +36,10 @@ namespace Aja.Game
             _gameOverButton.onClick.AddListener(onClickGameOver);
         }
 
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> Develop-Winner
     }
 }

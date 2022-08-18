@@ -123,7 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &31845796
+=======
+--- !u!1 &78268247
+>>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,21 +135,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< Updated upstream
   - component: {fileID: 31845797}
   - component: {fileID: 31845798}
   m_Layer: 0
   m_Name: Left
+=======
+  - component: {fileID: 78268248}
+  - component: {fileID: 78268250}
+  - component: {fileID: 78268249}
+  m_Layer: 5
+  m_Name: ScoreText
+>>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
+<<<<<<< Updated upstream
   m_IsActive: 0
 --- !u!4 &31845797
 Transform:
+=======
+  m_IsActive: 1
+--- !u!224 &78268248
+RectTransform:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 31845796}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.992, y: 0, z: 0}
@@ -157,10 +176,29 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &31845798
 BoxCollider2D:
+=======
+  m_GameObject: {fileID: 78268247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 185553430}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 247, y: 35}
+  m_SizeDelta: {x: 143.59998, y: 70}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &78268249
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   m_GameObject: {fileID: 31845796}
   m_Enabled: 1
   m_Density: 1
@@ -181,6 +219,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 10.629629}
   m_EdgeRadius: 0
+<<<<<<< HEAD
 --- !u!1 &78268247
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +264,9 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+=======
+=======
+>>>>>>> Develop-Winner
   m_GameObject: {fileID: 78268247}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -341,6 +383,10 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185553429}
   m_CullTransparentMesh: 1
+<<<<<<< HEAD
+=======
+>>>>>>> Stashed changes
+>>>>>>> Develop-Winner
 --- !u!1 &240062566
 GameObject:
   m_ObjectHideFlags: 0
@@ -532,6 +578,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< Updated upstream
 --- !u!1 &829874170
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,6 +637,8 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 10.629629}
   m_EdgeRadius: 0
+=======
+>>>>>>> Stashed changes
 --- !u!1 &843838192
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,10 +870,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   grid: 0
-  enemyCount: 0
   enemyList: []
   readyAttack: []
-  jeda: 0.2
+  jeda: 0.5
   bullet: {fileID: 1106272995693505428, guid: 4d7d08813240ee942b5d7f103d69db5b, type: 3}
 --- !u!114 &910055194
 MonoBehaviour:
@@ -850,7 +898,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d56f3296c76b646933f8f7d58b3c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.5
 --- !u!1 &1003294913
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,9 +1126,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 31845797}
-  - {fileID: 829874171}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1128,7 +1174,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -9, y: -0.019493103}
@@ -1154,7 +1200,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 9, y: -0.019493103}
