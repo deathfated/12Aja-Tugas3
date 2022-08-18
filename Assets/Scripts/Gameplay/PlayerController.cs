@@ -1,3 +1,4 @@
+using Aja.Game;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,6 +17,8 @@ namespace Aja.Gameplay
         private Vector2 resetPosition;
 
         public GameObject bulletFabs;
+
+        private GameController GameController;
 
         private void Start()
         {
@@ -74,6 +77,7 @@ namespace Aja.Gameplay
             gameObject.SetActive(false);
 
             playerLives -= 1;
+            //GameController.OnDecreaseLives();
 
             Invoke(nameof(Respawn), 5.0f);
         }

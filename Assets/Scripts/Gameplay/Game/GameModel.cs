@@ -10,6 +10,8 @@ namespace Aja.Game
         public int Score { get; private set; }
         public string Name { get; private set; }
 
+        public int Lives { get; private set; }
+
         public void SetScore(int skor)
         {
             Score = skor;
@@ -25,6 +27,18 @@ namespace Aja.Game
         public void SetName(string name)
         {
             Name = name;
+            SetDataAsDirty();
+        }
+
+        public void SetLives(int lives)
+        {
+            Lives = lives;
+            SetDataAsDirty();
+        }
+
+        public void DecreaseLives()
+        {
+            Lives--;
             SetDataAsDirty();
         }
     }

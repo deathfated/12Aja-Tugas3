@@ -1,13 +1,12 @@
 using Agate.MVC.Base;
-using Aja.Game;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Aja.Gameplay
+namespace Aja.SaveData
 {
-    public class GpView : BaseSceneView
+    public interface ISaveDataModel : IBaseModel
     {
-        public GameView GameView;
+        public int Lives { get; }
     }
 }

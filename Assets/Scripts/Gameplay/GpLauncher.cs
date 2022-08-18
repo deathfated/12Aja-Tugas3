@@ -15,13 +15,17 @@ namespace Aja.Gameplay
 
         protected override IConnector[] GetSceneConnectors()
         {
-            return null;
+            return new IConnector[]
+            {
+                new GameplayConnector()
+            };
         }
 
         protected override IController[] GetSceneDependencies()
         {
             return new IController[]
             {
+                new LivesController(),
                 new GameController()
             };
         }
