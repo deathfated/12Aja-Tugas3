@@ -8,6 +8,6 @@ namespace Aja.Gameplay
 {
     public class GpView : BaseSceneView
     {
-        [SerializeField] public GameView GameView;
+        public GameView GameView;
     }
 }

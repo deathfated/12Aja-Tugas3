@@ -2,6 +2,7 @@ using Agate.MVC.Base;
 using Agate.MVC.Core;
 using Aja.Boot;
 using Aja.Game;
+using Aja.Soundfx;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,14 +16,18 @@ namespace Aja.Gameplay
 
         protected override IConnector[] GetSceneConnectors()
         {
-            return null;
+            return new IConnector[]
+            {
+                new GameplayConnector()
+            };
         }
 
         protected override IController[] GetSceneDependencies()
         {
             return new IController[]
             {
-                new GameController()
+                new GameController(),
+                new SoundfxController()
             };
         }
 

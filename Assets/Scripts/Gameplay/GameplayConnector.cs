@@ -1,18 +1,30 @@
+using Agate.MVC.Base;
+using Aja.Message;
+using Aja.Soundfx;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameplayConnector : MonoBehaviour
+namespace Aja.Gameplay
 {
-    // Start is called before the first frame update
-    void Start()
+    public class GameplayConnector : BaseConnector
     {
-        
-    }
+        private SoundfxController _soundfx;
+        //private SaveDataController _saveData;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        protected override void Connect()
+        {
+            Subscribe<UpdateScoreMessage>(OnUpdateScore);
+        }
+
+        protected override void Disconnect()
+        {
+            Unsubscribe<UpdateScoreMessage>(OnUpdateScore);
+        }
+
+        public void OnUpdateScore(UpdateScoreMessage message)
+        {
+            _soundfx.OnUpdateScore();
+        }
     }
 }
