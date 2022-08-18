@@ -42,8 +42,8 @@ namespace Aja.Gameplay
                 EnemyFire enemyfire = enemyParent.GetComponent<EnemyFire>();
                 enemyfire.swapAttack(collision.gameObject);
 
-                if (PowerupOn)
-                Destroy(gameObject, 0.01f);
+                //if (PowerupOn)
+                Destroy(gameObject, 0.001f);
             }
         }
     }
