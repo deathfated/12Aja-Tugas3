@@ -2,6 +2,7 @@ using Agate.MVC.Base;
 using Agate.MVC.Core;
 using Aja.Boot;
 using Aja.Game;
+using Aja.Score;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,7 +18,8 @@ namespace Aja.Gameplay
         {
             return new IConnector[]
             {
-                new GameplayConnector()
+                new GameplayConnector(),
+                new ScoreConnector()
             };
         }
 
@@ -26,6 +28,7 @@ namespace Aja.Gameplay
             return new IController[]
             {
                 new LivesController(),
+                new ScoreController(),
                 new GameController()
             };
         }

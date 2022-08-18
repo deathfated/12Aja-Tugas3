@@ -30,5 +30,11 @@ namespace Aja.SaveData
             _model.SetLivesData(lives);
             SaveData();
         }
+
+        public void OnUpdateScore(int score)
+        {
+            _model.SetScoreData(score);
+            SaveData();
+        }
     }
 }
