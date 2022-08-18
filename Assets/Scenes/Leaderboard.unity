@@ -404,11 +404,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Develop-Winner
 --- !u!1 &656515851
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,8 +449,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &784702326
 GameObject:
   m_ObjectHideFlags: 0
@@ -536,7 +529,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 784702326}
   m_CullTransparentMesh: 1
->>>>>>> Develop-Winner
 --- !u!1 &935952664
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,11 +564,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  m_AnchoredPosition: {x: 0, y: 150}
-=======
   m_AnchoredPosition: {x: 0, y: 323}
->>>>>>> Develop-Winner
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &935952666
@@ -621,8 +609,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 935952664}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1342013340
 GameObject:
   m_ObjectHideFlags: 0
@@ -699,7 +685,6 @@ MonoBehaviour:
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 1
   m_ConstraintCount: 1
->>>>>>> Develop-Winner
 --- !u!1 &1551838540
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,8 +852,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652194229}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
 --- !u!1 &1847956628
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +932,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1847956628}
   m_CullTransparentMesh: 1
->>>>>>> Develop-Winner
 --- !u!1 &1932729809
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,10 +1107,7 @@ RectTransform:
   - {fileID: 2055823629}
   - {fileID: 935952665}
   - {fileID: 1652194230}
-<<<<<<< HEAD
-=======
   - {fileID: 5415130}
->>>>>>> Develop-Winner
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1137,8 +1116,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
-<<<<<<< HEAD
-=======
 --- !u!1 &2055109994
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1160,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0055ff8ac7964f34f8027e0aad5437f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
->>>>>>> Develop-Winner
 --- !u!1 &2055823628
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1236,3 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2055823628}
   m_CullTransparentMesh: 1
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> Develop-Winner

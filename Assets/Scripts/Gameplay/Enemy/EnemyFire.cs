@@ -43,7 +43,9 @@ namespace Aja.Enemy
         }
         public void addEnemyList()
         {
-            enemySearch();
+            int index = 1;
+
+                enemySearch();
             addAttackers();
         }
 
