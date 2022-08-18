@@ -2,43 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyParent : MonoBehaviour
+namespace Aja.Enemy
 {
-    public float speed;
-    private bool turnRight;
-    // Start is called before the first frame update
-    void Start()
+    public class EnemyParent : MonoBehaviour
     {
-        turnRight = true;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (turnRight)
+        public float speed;
+        private bool turnRight;
+        // Start is called before the first frame update
+        void Start()
         {
-            transform.Translate(speed * Time.deltaTime * Vector2.right);
-            Debug.Log(speed);
+            turnRight = true;
         }
 
-        if (!turnRight)
+        // Update is called once per frame
+        void Update()
         {
-            transform.Translate(speed * Time.deltaTime * Vector2.left);
-            Debug.Log(speed);
-        }
-        
-    }
+            if (turnRight)
+            {
+                transform.Translate(speed * Time.deltaTime * Vector2.right);
+                Debug.Log(speed);
+            }
 
-    public void changeDir()
-    {
-        if (turnRight)
-        {
-            turnRight = false;
+            if (!turnRight)
+            {
+                transform.Translate(speed * Time.deltaTime * Vector2.left);
+                Debug.Log(speed);
+            }
+
         }
-        else
+
+        public void changeDir()
         {
-          turnRight = true;
+            if (turnRight)
+            {
+                turnRight = false;
+            }
+            else
+            {
+                turnRight = true;
+            }
+
         }
-        
     }
 }
