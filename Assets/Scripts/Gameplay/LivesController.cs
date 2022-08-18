@@ -1,7 +1,9 @@
 using Agate.MVC.Base;
+using Aja.Player;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Aja.Game
 {
