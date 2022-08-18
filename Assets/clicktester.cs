@@ -1,3 +1,4 @@
+using Aja.Enemy;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -25,7 +26,6 @@ public class clicktester : MonoBehaviour
                 Debug.Log(hit.collider.name);
                 EnemyFire enemyfire = gameObject.GetComponent<EnemyFire>();
                 enemyfire.swapAttack(hit.collider.gameObject);
-                Destroy(hit.collider.gameObject);
             }
         }
     }

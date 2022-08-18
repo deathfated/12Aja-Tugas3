@@ -8,6 +8,7 @@ namespace Aja.Boot
 {
     public class SplashScreen : BaseSplash<SplashScreen>
     {
+
         protected override ILoad GetLoader()
         {
             return SceneLoader.Instance;

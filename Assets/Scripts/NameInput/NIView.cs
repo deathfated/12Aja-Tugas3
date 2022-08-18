@@ -5,16 +5,16 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace Aja.Leaderboard
+namespace Aja.NameInput
 {
-    public class LbView : BaseSceneView
+    public class NIView : BaseSceneView
     {
-        [SerializeField] private Button _backButton;
+        [SerializeField] private Button _playButton;
 
         public void SetCallbacks(UnityAction onClickPlayButton)
         {
-            _backButton.onClick.RemoveAllListeners();
-            _backButton.onClick.AddListener(onClickPlayButton);
+            _playButton.onClick.RemoveAllListeners();
+            _playButton.onClick.AddListener(onClickPlayButton);
         }
     }
 }

@@ -26,6 +26,7 @@ namespace Aja.MainMenu
         protected override IEnumerator InitSceneObject()
         {
             _view.SetCallbacks(OnClickPlayButton);
+            _view.SetCallbackToo(OnClickLeaderboardButton);
             yield return null;
         }
 
@@ -36,7 +37,12 @@ namespace Aja.MainMenu
 
         private void OnClickPlayButton()
         {
-            SceneLoader.Instance.LoadScene("Gameplay");
+            SceneLoader.Instance.LoadScene("NameInput");
+        }
+
+        private void OnClickLeaderboardButton()
+        {
+            SceneLoader.Instance.LoadScene("Leaderboard");
         }
     }
 }
