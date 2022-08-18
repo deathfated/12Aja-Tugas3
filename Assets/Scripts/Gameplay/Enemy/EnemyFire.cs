@@ -6,11 +6,7 @@ namespace Aja.Enemy
 {
     public class EnemyFire : MonoBehaviour
     {
-<<<<<<< HEAD
-        public int grid, enemyCount;
-=======
         public int grid;
->>>>>>> Develop-Winner
         public List<GameObject> enemyList = new List<GameObject>();
         public List<GameObject> readyAttack = new List<GameObject>();
 
@@ -44,52 +40,10 @@ namespace Aja.Enemy
         public void setEnemyCount(int counted)
         {
             grid = counted;
-<<<<<<< HEAD
-            enemyCount = grid;
         }
         public void addEnemyList()
         {
-            enemyCount = grid;
-            int index = 1;
-
-            for (int i = 0; i < 5; i++)
-            {
-                enemySearch(index);
-                if (enemyCount == 0)
-                {
-                    index += 1;
-                    enemyCount = grid;
-                }
-            }
-
-            addAttackers();
-
-
-        }
-
-        void enemySearch(int index)
-        {
-            for (int i = 0; i < grid; i++)
-            {
-
-                enemyCount -= 1;
-                GameObject g = GameObject.Find(index.ToString() + (i + 1));
-                enemyList.Add(g);
-            }
-
-            int lenght = enemyList.Count;
-
-            for (int x = 0; x < lenght; x++)
-            {
-                enemyList[x].name = x.ToString();
-            }
-=======
-        }
-        public void addEnemyList()
-        {
-            int index = 1;
-
-                enemySearch();
+            enemySearch();
             addAttackers();
         }
 
@@ -100,18 +54,13 @@ namespace Aja.Enemy
                 GameObject g = GameObject.Find(i.ToString());
                 enemyList.Add(g);
             }
->>>>>>> Develop-Winner
         }
 
         void addAttackers()
         {
             for (int i = 0; i < grid; i++)
             {
-<<<<<<< HEAD
-                GameObject g = GameObject.Find(i.ToString());
-=======
                 GameObject g = enemyList[i];
->>>>>>> Develop-Winner
                 readyAttack.Add(g);
             }
         }
@@ -119,29 +68,6 @@ namespace Aja.Enemy
         public void swapAttack(GameObject gameobject)
         {
             int index = readyAttack.IndexOf(gameobject);
-<<<<<<< HEAD
-
-            int index1 = enemyList.IndexOf(gameobject);
-
-            int idx = int.Parse(gameobject.name);
-
-
-
-            if (readyAttack.Contains(gameobject))
-            {
-
-                enemyList.RemoveAt(index);
-                if (GameObject.Find((idx + grid).ToString()) == null)
-                {
-                    readyAttack.RemoveAt(index);
-                }
-
-                if (GameObject.Find((idx + grid).ToString()) != null)
-                {
-                    readyAttack[index] = GameObject.Find((idx + grid).ToString());
-                    //  readyAttack.RemoveAt(index);
-
-=======
             int index1 = enemyList.IndexOf(gameobject);
 
             if (readyAttack.Contains(gameobject))
@@ -153,7 +79,6 @@ namespace Aja.Enemy
                 if ((index1 + grid) < (grid * 5))
                 {
                     readyAttack[index] = enemyList[index1+grid];
->>>>>>> Develop-Winner
                 }
                 Destroy(gameobject);
             }
