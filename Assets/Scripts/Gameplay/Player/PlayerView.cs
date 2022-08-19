@@ -21,6 +21,9 @@ namespace Aja.Player
         public GameObject scoreManager;
 
         [SerializeField] private GameObject GOPanel;
+        [SerializeField] private GameObject PlayerLife1;
+        [SerializeField] private GameObject PlayerLife2;
+
 
         void Start()
         {
@@ -36,6 +39,8 @@ namespace Aja.Player
             {
                 Fire();
             }
+
+            UpdateLiveUI();
         }
 
         private void MovePlayer(Vector2 move)
@@ -104,6 +109,29 @@ namespace Aja.Player
             AddScoreScript addscore = scoreManager.GetComponent<AddScoreScript>();
             addscore.addScore();
             Time.timeScale = 0;
+        }
+
+        void UpdateLiveUI()
+        {
+            switch (playerLives)
+            {
+                case 3:
+                    PlayerLife1.SetActive(true);
+                    PlayerLife2.SetActive(true);
+                    break;
+                case 2:
+                    PlayerLife1.SetActive(true);
+                    PlayerLife2.SetActive(false);
+                    break;
+                case 1:
+                    PlayerLife1.SetActive(false);
+                    PlayerLife2.SetActive(false);
+                    break;
+                case 0:
+                    PlayerLife1.SetActive(false);
+                    PlayerLife2.SetActive(false);
+                    break;
+            }
         }
     }
 }

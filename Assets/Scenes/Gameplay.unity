@@ -1961,6 +1961,8 @@ MonoBehaviour:
   bulletFabs: {fileID: 1106272995693505428, guid: 5e7785634922a27489638101d232494c, type: 3}
   scoreManager: {fileID: 914587920}
   GOPanel: {fileID: 1542094848}
+  PlayerLife1: {fileID: 2112906438}
+  PlayerLife2: {fileID: 376691588}
 --- !u!50 &1332495729
 Rigidbody2D:
   serializedVersion: 4
