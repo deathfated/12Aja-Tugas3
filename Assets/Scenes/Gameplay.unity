@@ -1799,6 +1799,7 @@ MonoBehaviour:
   speed: 3
   playerLives: 0
   bulletFabs: {fileID: 1106272995693505428, guid: 5e7785634922a27489638101d232494c, type: 3}
+  GOPanel: {fileID: 1542094848}
 --- !u!50 &1332495729
 Rigidbody2D:
   serializedVersion: 4

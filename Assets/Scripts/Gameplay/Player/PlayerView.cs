@@ -18,7 +18,7 @@ namespace Aja.Player
 
         public GameObject bulletFabs;
 
-        [SerializeField] public 
+        [SerializeField] private GameObject GOPanel;
 
         void Start()
         {
@@ -63,11 +63,11 @@ namespace Aja.Player
         {
             if (collision.gameObject.CompareTag("bullet"))
             {
-                if (playerLives <= 0)
+                /*if (playerLives <= 0)
                 {
-                    //gameover
+                    GOPanel.SetActive(true);
                 }
-                else Dead();
+                else*/ Dead();
             }
         }
 
@@ -79,7 +79,11 @@ namespace Aja.Player
             playerLives -= 1;
             //GameController.OnDecreaseLives();
 
-            Invoke(nameof(Respawn), 5.0f);
+            if (playerLives > 0)
+            {
+                Invoke(nameof(Respawn), 5.0f);
+            }
+            else GOPanel.SetActive(true);
         }
 
         void Respawn()
