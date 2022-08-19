@@ -43,9 +43,8 @@ namespace Aja.Enemy
         }
         public void addEnemyList()
         {
-            int index = 1;
 
-                enemySearch();
+            enemySearch();
             addAttackers();
         }
 
@@ -89,6 +88,12 @@ namespace Aja.Enemy
         public void Fire(int x)
         {
             Instantiate(bullet, readyAttack[x].transform.position, Quaternion.identity);
+        }
+
+        public void ClearList()
+        {
+            enemyList.Clear();
+            readyAttack.Clear();
         }
     }
 }

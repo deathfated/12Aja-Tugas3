@@ -11,9 +11,11 @@ namespace Aja.Enemy
         public int grid;
         public GameObject row1, row2, row3, row4, row5,
             enemy1, enemy2, enemy3;
+        private Vector2 orPos;
 
         void Start()
         {
+            orPos = transform.position;
             createEnemy();
             EnemyFire enemyfire = gameObject.GetComponent<EnemyFire>();
             enemyfire.setEnemyCount(grid);
@@ -50,6 +52,16 @@ namespace Aja.Enemy
                 GameObject en5 = (GameObject)Instantiate(enemy3, pos5, Quaternion.identity, row5.transform);
                 en5.name = (i + 44).ToString();
             }
+        }
+
+        public void Spawn()
+        {
+            transform.position = orPos;
+            EnemyFire enemyfire = gameObject.GetComponent<EnemyFire>();
+            enemyfire.ClearList();
+            createEnemy();
+            enemyfire.setEnemyCount(grid);
+            enemyfire.addEnemyList();
         }
     }
 }
