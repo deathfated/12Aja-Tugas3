@@ -36,22 +36,28 @@ namespace Aja.Enemy
 
         public void changeDir()
         {
-            transform.Translate(0f, -0.2f, 0f);
+            
             if (turnRight)
             {
                 isMoving = false;
                 turnRight = false;
-                transform.Translate(-0.2f, 0f, 0f);
+                transform.Translate(-0.3f, -0.2f, 0f);
                 isMoving = true;
             }
             else
             {
                 isMoving = false;
                 turnRight = true;
-                transform.Translate(0.2f, 0f, 0f);
+                transform.Translate(0.3f, -0.2f, 0f);
                 isMoving = true;
             }
 
+        }
+
+        public void startDir()
+        {
+            turnRight = true;
+            isMoving = true;
         }
     }
 }

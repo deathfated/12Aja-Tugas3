@@ -17,13 +17,13 @@ namespace Aja.Game
 
         protected override void InitRenderModel(IGameModel model)
         {
-            _scoreText.text = $"{model.Score.ToString()}";
+           // _scoreText.text = $"{model.Score.ToString()}";
             _nameText.text = PlayerPrefs.GetString("playerName"); // $"{model.Name}";
         }
 
         protected override void UpdateRenderModel(IGameModel model)
         {
-            _scoreText.text = $"{model.Score.ToString()}";
+            //_scoreText.text = $"{model.Score.ToString()}";
         }
 
         public void SetCallbacks(UnityAction onClickGameOver)
@@ -31,7 +31,5 @@ namespace Aja.Game
             _gameOverButton.onClick.RemoveAllListeners();
             _gameOverButton.onClick.AddListener(onClickGameOver);
         }
-
-
     }
 }

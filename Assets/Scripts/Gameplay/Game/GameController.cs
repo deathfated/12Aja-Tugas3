@@ -15,6 +15,7 @@ namespace Aja.Game
         private void OnClickGameOver()
         {
             SceneLoader.Instance.LoadScene("Leaderboard");
+            Time.timeScale = 1;
         }
 
         public override void SetView(GameView view)

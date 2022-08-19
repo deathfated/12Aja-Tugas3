@@ -2,6 +2,7 @@ using Agate.MVC.Base;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 namespace Aja.Player
 {
@@ -17,6 +18,7 @@ namespace Aja.Player
         private Vector2 resetPosition;
 
         public GameObject bulletFabs;
+        public GameObject scoreManager;
 
         [SerializeField] private GameObject GOPanel;
 
@@ -67,7 +69,8 @@ namespace Aja.Player
                 {
                     GOPanel.SetActive(true);
                 }
-                else*/ Dead();
+                else*/
+                Dead();
             }
         }
 
@@ -83,12 +86,24 @@ namespace Aja.Player
             {
                 Invoke(nameof(Respawn), 5.0f);
             }
-            else GOPanel.SetActive(true);
+            else
+            {
+                GOPanel.SetActive(true);
+                SaveScore();
+            }
+
         }
 
         void Respawn()
         {
             gameObject.SetActive(true);
+        }
+
+        void SaveScore()
+        {
+            AddScoreScript addscore = scoreManager.GetComponent<AddScoreScript>();
+            addscore.addScore();
+            Time.timeScale = 0;
         }
     }
 }

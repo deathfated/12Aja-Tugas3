@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Aja.Game;
+using UnityEngine.Events;
 
 namespace Aja.Enemy
 {
@@ -16,12 +18,15 @@ namespace Aja.Enemy
 
         public GameObject bullet;
 
+        public GameObject scoreManager;
+
         void Start()
         {
             defJeda = jeda;
         }
         void Update()
         {
+
             if (jeda > 0)
             {
                 jeda -= Time.deltaTime;
@@ -70,12 +75,29 @@ namespace Aja.Enemy
         {
             int index = readyAttack.IndexOf(gameobject);
             int index1 = enemyList.IndexOf(gameobject);
+            int points = 0;
+            if(index1 < 22)
+            {
+                points = 10;
+            }
+            if (index1 > 21 && index1 < 44)
+            {
+                points = 20;
+            }
+            if(index1 > 43)
+            {
+                points = 30;
+            }
+
+            AddScoreScript addscore = scoreManager.GetComponent<AddScoreScript>();
+            addscore.incScore(points);
 
             if (readyAttack.Contains(gameobject))
             {
                 if ((index1 + grid) >= (grid * 5))
                 {
                     readyAttack.RemoveAt(index);
+                    ReSpawn();
                 }
                 if ((index1 + grid) < (grid * 5))
                 {
@@ -95,5 +117,16 @@ namespace Aja.Enemy
             enemyList.Clear();
             readyAttack.Clear();
         }
+
+        public void ReSpawn()
+        {
+            if (readyAttack.Count <= 0)
+            {
+                EnemySpawner enemyspawner = gameObject.GetComponent<EnemySpawner>();
+                enemyspawner.Spawn();
+            }
+        }
+
+        
     }
 }

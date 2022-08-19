@@ -56,12 +56,16 @@ namespace Aja.Enemy
 
         public void Spawn()
         {
+            EnemyParent enemyparent = gameObject.GetComponent<EnemyParent>();
+            enemyparent.startDir();
             transform.position = orPos;
             EnemyFire enemyfire = gameObject.GetComponent<EnemyFire>();
             enemyfire.ClearList();
             createEnemy();
             enemyfire.setEnemyCount(grid);
             enemyfire.addEnemyList();
+
+
         }
     }
 }

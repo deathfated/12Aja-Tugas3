@@ -11,7 +11,7 @@ public class ScoreUi : MonoBehaviour
     void Start()
     {
         
-      //  scoreManager.AddScore(new Score(name: "winner", score: 666));
+      // scoreManager.AddScore(new Score(name: "winner", score: 666));
         
         var scores = scoreManager.GetHighScores().ToArray();
         if(scores.Length < 8)
